@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UPSC Companion Settings</title><link rel="stylesheet" href="styles.css"></head><body>
+<header><div class="eyebrow">SETTINGS</div><h1>AI connection</h1><p class="sub">Use a stable free/local model first. This extension can fall back between Ollama, OpenRouter, and Gemini.</p></header>
+<section class="panel">
+<h2>Preferred AI provider</h2>
+<p class="hint">For the most stable long-term setup, use a local Ollama model. If you do not want local hosting, choose OpenRouter or Gemini.</p>
+<label for="provider">Provider</label>
+<select id="provider">
+  <option value="ollama">Ollama (local, free)</option>
+  <option value="openrouter">OpenRouter</option>
+  <option value="gemini">Gemini</option>
+</select>
+</section>
+<section class="panel">
+<h2>Ollama (local free model)</h2>
+<p class="hint">Run Ollama locally and pull a vision model such as qwen2.5vl:7b or llama3.2-vision.</p>
+<label for="ollamaModel">Ollama model name</label><input id="ollamaModel" type="text" autocomplete="off" placeholder="qwen2.5vl:7b">
+</section>
+<section class="panel">
+<h2>OpenRouter</h2>
+<p class="hint">Optional. Use for cloud fallback with small vision models. Free availability changes often.</p>
+<label for="openRouterApiKey">OpenRouter API key</label><input id="openRouterApiKey" type="password" autocomplete="off" placeholder="Paste OpenRouter key">
+<label for="openRouterModel">OpenRouter model</label><input id="openRouterModel" type="text" autocomplete="off" placeholder="meta-llama/llama-3.2-11b-vision-instruct">
+</section>
+<section class="panel">
+<h2>Gemini API key</h2>
+<p class="hint">Create a key in Google AI Studio. Free-tier limits can change. The key is stored in this Chrome profile's local extension storage.</p>
+<label for="apiKey">Gemini API key</label><input id="apiKey" type="password" autocomplete="off" placeholder="Paste Gemini API key">
+<div class="button-row"><button id="saveKey" class="primary">Save settings</button><button id="clearKey" class="secondary">Remove keys</button></div><p id="status" class="hint"></p>
+</section>
+<section class="panel"><h2>Privacy / cost note</h2><p class="hint">Your captured slide and prompt are sent to the selected AI provider. For the most stable long-term setup, prefer a local Ollama model. The extension does not create billing by itself.</p><p class="hint">Watcher mode checks the visible tab every five seconds and sends a slide to AI only when the image changes. Pause it whenever you want. No teacher audio is captured by this extension.</p></section>
+<script src="options.js"></script></body></html>

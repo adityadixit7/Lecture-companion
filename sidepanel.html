@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UPSC Lecture Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="eyebrow">YOUR STUDY WORKSPACE</div>
+    <h1>UPSC Lecture Companion</h1>
+    <p class="sub">Slides → draft → your approval → revision notes</p>
+    <div id="systemStatus" class="status-banner" aria-live="polite">Ready. Capture a slide or start the watcher.</div>
+  </header>
+
+  <section class="panel">
+    <div class="section-head">
+      <h2>Lecture watcher</h2>
+      <span id="watchStatus" class="pill">Paused</span>
+    </div>
+    <p class="hint">When enabled, checks the visible tab every 5 seconds. AI is called only when the visible image changes. Keep the lecture tab active and visible.</p>
+    <div class="button-row">
+      <button id="startWatch" class="primary">Start watcher</button>
+      <button id="pauseWatch" class="secondary" disabled>Pause</button>
+      <button id="captureNow" class="secondary">Capture now</button>
+    </div>
+    <div id="captureMeta" class="hint"></div>
+    <img id="slidePreview" class="slide-preview hidden" alt="Most recently captured slide">
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Current slide draft</h2><span id="draftStatus" class="pill">No draft yet</span></div>
+    <div id="draftText" class="draft-box">Capture a slide to begin. Add your Gemini API key in Settings to generate AI summaries.</div>
+    <div class="button-row">
+      <button id="regenerate" class="secondary">Summarize again</button>
+      <button id="addMissingDetail" class="secondary">Add missing detail</button>
+      <button id="approveDraft" class="primary" disabled>Approve to notes</button>
+    </div>
+    <label for="draftEditor">Edit draft before approving</label>
+    <textarea id="draftEditor" rows="7" placeholder="AI-generated draft will appear here. You can edit it before approving."></textarea>
+    <div class="button-row">
+      <button id="saveEditedDraft" class="secondary">Update draft</button>
+      <button id="starDraft" class="secondary">★ Star draft point</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Ask / research</h2><span class="pill">On demand</span></div>
+    <label for="commandInput">Type a command or question</label>
+    <textarea id="commandInput" rows="3" placeholder="e.g. Explain the judgment in depth; find UPSC PYQs on this topic; verify this against an official source..."></textarea>
+    <div class="button-row">
+      <button id="askAI" class="primary">Ask AI about slide</button>
+      <button id="googleResearch" class="secondary">Search Google</button>
+    </div>
+    <div class="button-row">
+      <button id="micButton" class="secondary">🎙 Voice command</button>
+      <span id="micStatus" class="hint"></span>
+    </div>
+    <label for="researchNotes">Paste research or source excerpts here (optional)</label>
+    <textarea id="researchNotes" rows="4" placeholder="Paste relevant PYQs, official-source text, or research you want the assistant to analyze..."></textarea>
+    <div class="button-row">
+      <button id="analyzeResearch" class="secondary">Analyze pasted research</button>
+      <button id="addResearch" class="primary">Add research to notes</button>
+    </div>
+    <div id="answerBox" class="answer-box">Answers and research summaries will appear here.</div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Approved class notes</h2><span id="noteCount" class="pill">0 notes</span></div>
+    <p class="hint">Only approved notes are permanent. Star important facts for revision. Notes are stored locally in this browser profile.</p>
+    <div id="notesList" class="notes-list"></div>
+    <div class="button-row">
+      <button id="refreshNotes" class="secondary">Refresh notes</button>
+      <button id="exportNotes" class="primary">Export / Save as PDF</button>
+      <button id="downloadNotes" class="secondary">Download Markdown</button>
+    </div>
+  </section>
+
+  <footer>
+    <a href="options.html" target="_blank">Settings / API key</a>
+    <span>v0.3 · Local notes · AI use is optional</span>
+  </footer>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
