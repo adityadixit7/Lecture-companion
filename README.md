@@ -1,6 +1,6 @@
-# UPSC Lecture Companion
+ Lecture Companion
 
-A lightweight Chrome extension for UPSC lecture revision. It captures the active lecture slide, summarizes it with an AI model, lets you edit and approve the draft, saves approved notes locally, and exports them as Markdown or PDF for revision.
+A lightweight Chrome extension for lecture note taker. It captures the active lecture slide, summarizes it with an AI model, lets you edit and approve the draft, saves approved notes locally, and exports them as Markdown or PDF for revision.
 
 This project is built for a practical study workflow:
 
