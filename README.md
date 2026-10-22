@@ -1,11 +1,11 @@
- Lecture Companion
+# Lecture Companion
 
-A lightweight Chrome extension for lecture note taker. It captures the active lecture slide, summarizes it with an AI model, lets you edit and approve the draft, saves approved notes locally, and exports them as Markdown or PDF for revision.
+A lightweight Chrome extension for lecture note taking. It captures the active lecture slide, summarizes it with an AI model, lets you edit and approve the draft, saves approved notes locally, and exports them as Markdown or PDF for revision.
 
 This project is built for a practical study workflow:
 
 - Capture the current lecture slide
-- Generate a concise UPSC-focused draft
+- Generate a concise lecture summary draft
 - Review and edit the draft manually
 - Approve it into local notes
 - Save notes for revision and export them later
@@ -37,7 +37,7 @@ The extension is designed for students who want to:
 - Approval of notes into local storage
 - Markdown export and PDF print export
 - Voice command support when browser microphone access is enabled
-- Instruction-driven research / question answering for UPSC-focused concepts
+- Instruction-driven research / question answering for lecture topics
 
 ---
 
@@ -113,7 +113,7 @@ The user opens a lecture tab and clicks Capture now or starts the watcher. The e
 
 ### 2. Summarize
 
-The captured image is passed to the selected AI provider with a focused UPSC summary prompt. The output is a concise draft rather than a long essay.
+The captured image is passed to the selected AI provider with a focused lecture summary prompt. The output is a concise draft rather than a long essay.
 
 ### 3. Review and edit
 
@@ -126,7 +126,7 @@ The draft appears in the editor area. The user can:
 
 ### 4. Research and validation
 
-The user can ask AI questions about the topic, paste source excerpts, and analyze them for UPSC relevance without needing to fully rewrite the whole note.
+The user can ask AI questions about the topic, paste source excerpts, and analyze them for relevance without needing to fully rewrite the whole note.
 
 ### 5. Export
 
@@ -204,7 +204,7 @@ This tool is best used as a revision assistant rather than a fully automated not
 
 ## Best long-term workflow
 
-For UPSC study, the recommended workflow is:
+For study sessions, the recommended workflow is:
 
 1. Use the local model for summaries
 2. Keep notes locally in the browser
@@ -240,7 +240,7 @@ Potential future enhancements include:
 - better note export folders by subject/date
 - improved local JSON backup/export system
 - automatic Markdown archive management
-- cleaner prompt templates for different UPSC subjects
+- cleaner prompt templates for different subjects
 - more robust browser permission handling
 - multi-subject note organization
 
@@ -248,8 +248,8 @@ Potential future enhancements include:
 
 ## Summary
 
-UPSC Lecture Companion is a practical browser extension for lecture capture, AI-assisted revision, and local note management. It is centered around a simple pattern:
+Lecture Companion is a practical browser extension for lecture capture, AI-assisted revision, and local note management. It is centered around a simple pattern:
 
 Slide → Draft → Review → Approved Notes → Markdown/PDF export
 
-This makes the tool especially useful for UPSC preparation, where concise, accurate, revision-friendly notes matter more than long generic AI output.
+This makes the tool especially useful for focused study and revision, where concise, accurate, revision-friendly notes matter more than long generic AI output.
